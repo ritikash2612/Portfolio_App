@@ -43,8 +43,7 @@
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="">Home</a>
-            <a class="navbar-brand" href="projects/">Projects</a>
+            <a class="navbar-brand" href="/home">Home</a>
             <a class="navbar-brand" href="">Education</a>
             <div class="collapse navbar-collapse" id="navbarSupportedContent" width="50px">
                 <ul class="navbar-nav">
@@ -79,28 +78,22 @@
 
         <section class="jumbotron text-center">
             <div class="container">
-                <h1 class="jumbotron-heading">Hello, I'm Ritika Sharma</h1>
-                <p class="lead text-muted">Full Stack Developer</p>
+                <h1 class="jumbotron-heading">Projects</h1>
                 <a href="mailto:ritika.sh2612@gmail.com " class="btn btn-primary">Email me</a>
             </div>
         </section>
 
         <div class="album py-5 bg-light">
             <div class="container">
-                <p class="lead text-muted">Work Experience</p>
+                <p class="lead text-muted"><strong>Project Descriptions</strong></p>
                 <div class="row">
 
-                    {% for job in jobs.all %}
+                    {% for proj in project.all %}
                     <div class="col-md-6">
-                        <div class="card mb-4 shadow-sm">
-                            <img class="bd-placeholder-img card-img-top" src="{{ job.image.url }}" width="40px"
-                                height="150px" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"
-                                focusable="false" role="img" aria-label="Placeholder: Thumbnail">
-                            </img>
-
-                            <div class="card-body" style="background-color: #685E73;">
-                                <p class="card-text"><strong>{{ job.duration_from}} to {{ job.duration_Till }}</strong></p>
-                                <p class="card-text" style="font: 1em sans-serif;">{{ job.summary }}</p>
+                        <div class="card mb-4 shadow-sm" style="background-color: off-white;">
+                            <div class="card-title" ><strong> {{ proj.name }}</strong></div>
+                            <div class="card-body" style="background-color: #BEE2E1;">
+                                <p class="card-text">{{ proj.summary }}</p>
                             </div>
                         </div>
                     </div>
@@ -133,18 +126,7 @@
     <script src="/docs/4.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o"
         crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-        crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
-        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-    <script src="semantic/dist/semantic.min.js"></script>
+ 
 </body>
 
 </html>
