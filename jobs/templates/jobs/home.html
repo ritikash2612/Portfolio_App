@@ -1,6 +1,5 @@
 <!doctype html>
 <html lang="en">
-
 <head>
     {% load static %}
 
@@ -60,15 +59,20 @@
                             <a class="dropdown-item" href="https://github.com/ritikash2612">GitHub</a>
                     </li>
 
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% static 'RitikaSharma_cv.pdf' %}"  aria-haspopup="true" aria-expanded="false">
+                            Resume
+                        </a>
+                    </li>
+
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Resume and Transcripts
+                            Transcripts
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="{ % static 'RitikaSharma_cv.pdf' % }">Resume</a>
-                            <a class="dropdown-item" href="{ % static 'transcriptUH.pdf' % }">Transcript 1</a>
-                            <a class="dropdown-item" href="{ % static 'Ritika_IT_Transcript.pdf' % }">Transcript 2</a>
+                            <a class="dropdown-item" href="{% static 'transcriptUH.pdf' %}">Transcript 1</a>
+                            <a class="dropdown-item" href="{% static 'Ritika_IT_Transcript.pdf' %}">Transcript 2</a>
                         </div>
                     </li>
                 </ul>
