@@ -2,6 +2,8 @@
 <html lang="en">
 
 <head>
+    {% load static %}
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -61,15 +63,14 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Resume and Transcript
+                            Resume and Transcripts
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="">Resume</a>
-                            <a class="dropdown-item" href="">Transcript</a>
-
+                            <a class="dropdown-item" href="{ % static 'RitikaSharma_cv.pdf' % }">Resume</a>
+                            <a class="dropdown-item" href="{ % static 'transcriptUH.pdf' % }">Transcript 1</a>
+                            <a class="dropdown-item" href="{ % static 'Ritika_IT_Transcript.pdf' % }">Transcript 2</a>
+                        </div>
                     </li>
-
-
                 </ul>
             </div>
         </nav>
@@ -110,8 +111,10 @@
 
                                     <ul class="list-group list-group-flush">
 
-                                        <li class="list-group-item" style="font-family: 'Open Sans', sans-serif;">{{ job.summary }}</li>
-                                        <li class="list-group-item" style="font-family: 'Open Sans', sans-serif;">{{ job.responsibility }}</li>
+                                        <li class="list-group-item" style="font-family: 'Open Sans', sans-serif;">
+                                            {{ job.summary }}</li>
+                                        <li class="list-group-item" style="font-family: 'Open Sans', sans-serif;">
+                                            {{ job.responsibility }}</li>
 
                                     </ul>
                                 </div>
@@ -146,9 +149,6 @@
                 <a href="#" style="margin-right: 80px;">Back to top</a>
             </p>
         </div>
-    </div>
-    <!-- </div> -->
-
     </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
