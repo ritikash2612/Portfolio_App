@@ -6,3 +6,4 @@ class Job(models.Model):
     duration_from = models.DateField()
     duration_Till = models.DateField()
     summary = models.TextField()
+    responsibility = models.TextField()

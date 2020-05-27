@@ -32,8 +32,6 @@
             }
         }
     </style>
-    <!-- Custom styles for this template -->
-    <!-- CSS only -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link href="album.css" rel="stylesheet">
@@ -44,7 +42,7 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <a class="navbar-brand" href="/home">Home</a>
-            <a class="navbar-brand" href="">Education</a>
+            <a class="navbar-brand" href="/schools">Education</a>
             <div class="collapse navbar-collapse" id="navbarSupportedContent" width="50px">
                 <ul class="navbar-nav">
                     <li class="nav-item dropdown">
@@ -75,7 +73,6 @@
     </header>
 
     <main role="main">
-
         <section class="jumbotron text-center">
             <div class="container">
                 <h1 class="jumbotron-heading">Projects</h1>
@@ -91,9 +88,11 @@
                     {% for proj in project.all %}
                     <div class="col-md-6">
                         <div class="card mb-4 shadow-sm" style="background-color: off-white;">
-                            <div class="card-title" ><strong> {{ proj.name }}</strong></div>
-                            <div class="card-body" style="background-color: #BEE2E1;">
-                                <p class="card-text">{{ proj.summary }}</p>
+                            <div class="card-title" style="background-color:#5D001E;">
+                                <div style="color:white; margin-left: 2px; font-family: 'Open Sans', sans-serif;"><strong> {{ proj.name }}</strong></div>
+                            </div>
+                            <div class="card-body" style="background-color:#E3E2DF;">
+                                <p class="card-text" style="font-family: 'Open Sans', sans-serif;"">{{ proj.summary }}</p>
                             </div>
                         </div>
                     </div>
@@ -108,15 +107,23 @@
         </div>
 
     </main>
-    <div class="container">
-        <div class="container text-center">
-            <p>©️ Ritika Sharma {% now "Y" %}</p>
-            <a href="#" class="fa fa-facebook"></a>
-            <a href="#" class="fa fa-linkedin"></a>
+
+    <div class="grid-container text-center" style="padding-top: 80px; height: 50px;">
+        <div><i class="fa fa-search"></i> <a href="mailto:ritika.sh2612@gmail.com" class="fa fa-envelope"></a> <a
+                href="https://www.linkedin.com/in/ritikash1226/" class="fa fa-linkedin"></a></p>
         </div>
-        <p class="float-right">
-            <a href="#">Back to top</a>
-        </p>
+        <div>
+            <p><i class="fa fa-home"></i> 1801 E 12th Street, Cleveland, Ohio, 44114</p>
+        </div>
+        <div>
+            <p><i class="fa fa-phone"></i> +1-808-451-1637</p>
+        </div>
+        <div class="grid-row">
+            <p>©️ Ritika Sharma {% now "Y" %}</p>
+            <p class="float-right">
+                <a href="#" style="margin-right: 80px;">Back to top</a>
+            </p>
+        </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -126,7 +133,19 @@
     <script src="/docs/4.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o"
         crossorigin="anonymous"></script>
- 
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="semantic/dist/semantic.min.js"></script>
+
 </body>
 
 </html>
